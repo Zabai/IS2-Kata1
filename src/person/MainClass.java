@@ -4,7 +4,9 @@
  */
 package person;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -12,7 +14,10 @@ import java.util.Date;
  */
 public class MainClass {
     public static void main(String[] args) {
-        Person p1 = new Person("Jason", "Hernandez", new Date(64, 7, 3));
+        Calendar f1;
+        f1 = GregorianCalendar.getInstance();
+        f1.set(1995, 8, 3);
+        Person p1 = new Person("Zabai", "Armas Herrera", f1);
         System.out.println("Nombre de P1: " + p1.getFullName());
         System.out.println("Edad de P1: " + p1.getAge() + " años");
     }
